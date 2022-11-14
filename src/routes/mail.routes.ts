@@ -1,12 +1,8 @@
 import * as express from "express";
+import MailController from "../controllers/mail.controller";
 
 const router = express.Router();
 
-router.post("/sendmail", (req, res) => {
-  console.log(req.body);
-  res.send({
-    message: "Mail sent successfully",
-  });
-});
+router.post("/sendmail", new MailController().sendMail);
 
 export default router;

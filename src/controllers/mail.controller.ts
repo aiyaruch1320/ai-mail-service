@@ -7,7 +7,7 @@ class MailController {
 
   sendMail = (req: Request, res: Response) => {
     const mail: IMailRequest = req.body;
-    const result = this.mailService.sendMail(req.body);
+    const result = this.mailService.sendMail(mail);
     res.status(200).send(result);
   };
 }
