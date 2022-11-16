@@ -1,4 +1,4 @@
-export interface IMailRequest {
+export interface IMail {
   title: string;
   from: string;
   to: string;
