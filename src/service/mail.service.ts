@@ -17,14 +17,13 @@ export default class MailService {
     );
   }
 
-  sendEmail = ({ title, from, to, cc, content }: IMail) => {
+  sendEmail = ({ subject, to, cc, text }: IMail) => {
     const mailOptions = {
-      title: title,
-      sender: `${process.env.SENDER_NAME} <${process.env.SENDER_MAIL}>`,
+      subject,
       from: `${process.env.SENDER_NAME} <${process.env.SENDER_MAIL}>`,
       to,
       cc,
-      content,
+      text,
     };
     this.createTransport().sendMail(mailOptions, (error, info) => {
       if (error) {

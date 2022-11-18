@@ -1,7 +1,7 @@
 export interface IMail {
-  title: string;
+  subject: string;
   from: string;
   to: string;
   cc?: string[];
-  content: string;
+  text: string;
 }
