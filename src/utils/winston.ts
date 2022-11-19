@@ -47,7 +47,7 @@ export const logInfo = (message: any) => {
       }),
     ],
   });
-  logger.debug(message);
+  logger.info(message);
 };
 
 export const logError = (message: any) => {
@@ -70,5 +70,5 @@ export const logError = (message: any) => {
       }),
     ],
   });
-  logger.debug(message);
+  logger.error(message);
 };
